@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <!-- Meta tags -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- External CSS libraries -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+        
+        <!-- Favicon -->
+        <link rel="icon" href="img/favicon.ico" />
+        
+        <!-- Title -->
+        <title>Grab The Fish</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="w3-container w3-amber">
+            <!-- Modal Trigger -->
+            <i id="game_info_open_button" class="fa fa-question w3-button w3-display-topright w3-padding"></i>
+
+            <h1 id="game_name">Grab The Fish</h1>
+        </header>
+
+        <!-- Score Table -->
+        <div id="score_table" class="w3-container w3-amber">
+            <p class="score_sign">Score</p>
+            <span class="w3-text-red" id="red_player_score">0</span>
+            <span class="score_separator">:</span>
+            <span class="w3-text-blue" id="blue_player_score">0</span>
+        </div>
+
+        <!-- Playground -->
+        <div id="playground">
+            <img src="img/normal_fish.svg" alt="fish" id="fish" />
+            <span class="w3-text-red" id="red_player_info">Siap?</span>
+            <span class="w3-text-blue" id="blue_player_info">Siap?</span>
+            <img src="img/cat.svg" alt="red player" id="red_player" />
+            <img src="img/cat.svg" alt="blue player" id="blue_player" />
+            <button id="play_again_button" class="w3-button w3-amber">Mulai</button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-container w3-amber">
+            <img src="img/wasd.png" class="player_control" />
+            <span id="footer_text"> by <a class="w3-text-gray" target="_blank">kelompok 2</a></span>
+            <img src="img/up_down_left_right.png" class="player_control" />
+        </footer>
+
+        <!-- The Modal -->
+        <div id="game_info" class="w3-modal">
+            <div class="w3-modal-content w3-animate-right w3-card-4 w3-left-align">
+                <header class="w3-container w3-amber">
+                    <i id="game_info_close_button" class="fa fa-close w3-display-topright w3-button"></i>
+                    <h3>Bagaimana cara memainkan permainannya?</h3>
+                </header>
+                <div class="w3-container">
+                    <p>
+                        Grab The Fish adalah game yang dilakukan dua pemain tentang memperebutkan ikan. Terdapat berbagai macam ikan, beberapa ikan bagus akan memberi poin.
+                        Sedangkan Beberapa ikan buruk akan menghilangkan poin. Pemain merah menggunakan tombol "W" atau menekan pada kucingnya untuk mengambil ikan. 
+                        Prinsip yang sama berlaku untuk pemain biru dengan menekan tombol panah naik. Pemain yang mencapai 5 poin terlebih dahulu memenangkan permainan. 
+                        Kemudian permainan dapat dimainkan lagi dengan menekan “Main lagi”. Tips: Berhati-hatilah dengan ikan mana yang akan anda ambil! Selamat bersenang-senang!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="js/main.js"></script>
+        <script src="js/fish.js"></script>
+        <script src="js/player.js"></script>
+    </body>
+</html>

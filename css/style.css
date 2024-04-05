@@ -1,0 +1,191 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+button {
+    font-family: "Patrick Hand", cursive;
+}
+
+/* Tampilan latar belakang halaman */
+body {
+    background: url(../img/bg.svg); 
+    text-align: center; 
+}
+
+/* Gaya untuk header */
+header {
+    border-radius: 0 0 var(--b-radius) var(--b-radius); 
+}
+
+/* Gaya untuk tabel skor */
+#score_table {
+    --width: 250px;
+    width: var(--width); 
+    margin-left: calc((100vw - var(--width)) / 2);
+    border-radius: 0 0 var(--b-radius) var(--b-radius); 
+    border: 3px solid; 
+    border-top: 0px solid; 
+}
+
+/* Gaya untuk tanda skor */
+.score_sign {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 4px 0;
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-weight: bold; 
+    border-bottom: 3px solid; 
+}
+
+/* Gaya untuk skor pemain merah, skor pemain biru, dan pemisah skor */
+#red_player_score,
+#blue_player_score,
+.score_separator {
+    font-size: 300%; 
+    font-family: "Source Code Pro", monospace, sans-serif; 
+}
+
+/* Gaya untuk informasi pemain merah dan biru */
+#red_player_info,
+#blue_player_info {
+    font-size: 340%; 
+    letter-spacing: -2px; 
+    font-weight: bold; 
+}
+
+/* Gaya untuk kontrol pemain */
+.player_control {
+    width: 5vw; 
+    margin: 10px 0; 
+}
+
+/* Gaya untuk teks footer */
+#footer_text {
+    margin: 0 18vw; 
+}
+
+/* Gaya untuk footer */
+footer {
+    position: fixed; 
+    left: 0;
+    bottom: 0; 
+    width: 100%; 
+    border-radius: var(--b-radius) var(--b-radius) 0 0; 
+    z-index: 2; 
+}
+
+/* Gaya untuk div game_info dan tombol */
+#game_info div,
+button {
+    border-radius: var(--b-radius); 
+}
+
+/* Gaya khusus untuk posisi tertentu */
+.w3-display-topleft {
+    border-radius: 0 0 var(--b-radius) 0; 
+}
+
+.w3-display-topright {
+    border-radius: 0 0 0 var(--b-radius); 
+}
+
+
+/* Variabel global */
+:root {
+    --b-radius: 10px; 
+
+    --playground-padding: 30px; 
+    --fish-width: 220px; 
+    --player-info-width: 350px; 
+    --player-width: 290px; 
+    --player-rotation: 65deg; 
+    --play-again-button-width: 370px; 
+}
+
+/* Gaya untuk elemen ikan, info pemain merah dan biru, pemain merah, pemain biru, dan tombol main lagi */
+#fish,
+#red_player_info,
+#blue_player_info,
+#red_player,
+#blue_player,
+#play_again_button {
+    position: absolute; 
+}
+
+/* Gaya untuk area permainan */
+#playground {
+    --width: 1200px; 
+    position: relative; 
+    width: var(--width); 
+    margin: 0 auto; 
+    height: 500px; 
+}
+
+/* Gaya untuk elemen ikan */
+#fish {
+    top: var(--playground-padding); 
+    left: calc(50% - var(--fish-width) / 2); 
+    border: 3px solid; 
+    border-radius: var(--b-radius); 
+    padding: var(--b-radius); 
+    width: var(--fish-width); 
+    z-index: 1; 
+}
+
+/* Gaya untuk info pemain merah */
+#red_player_info {
+    top: 0; 
+    left: 10px; 
+    width: var(--player-info-width); 
+}
+
+/* Gaya untuk info pemain biru */
+#blue_player_info {
+    top: 0; 
+    right: 10px; 
+    width: var(--player-info-width); 
+}
+
+/* Gaya untuk pemain merah */
+#red_player {
+    bottom: -105px; 
+    left: 220px; 
+    width: var(--player-width); 
+    transform: rotate(var(--player-rotation)); 
+}
+
+/* Gaya untuk pemain biru */
+#blue_player {
+    bottom: -105px; 
+    right: 220px; 
+    width: var(--player-width); 
+    transform: rotate(calc(360deg - var(--player-rotation))); 
+}
+
+/* Gaya untuk tombol main lagi */
+#play_again_button {
+    bottom: var(--playground-padding); 
+    left: calc(50% - var(--play-again-button-width) / 2); 
+    width: var(--play-again-button-width); 
+    height: calc(var(--play-again-button-width) / 5); 
+    font-size: xx-large; 
+}
+
+/* Media query untuk lebar layar maksimum 1200px */
+@media (max-width: 1200px) {
+    .playground {
+        transform: scale(0.8); 
+    }
+}
+
+/* Media query untuk lebar layar maksimum 700px */
+@media (max-width: 700px) {
+    .playground {
+        transform: scale(0.5); 
+    }
+}
